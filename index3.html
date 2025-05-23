@@ -244,6 +244,7 @@
     </nav>
   </div>
 </header>
+    
 
 
 
@@ -253,6 +254,13 @@
 
   menuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
+  });
+
+    // Hide menu when any link inside menu is clicked
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
   });
 </script>
 
